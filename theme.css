@@ -1,0 +1,442 @@
+/* may be useful later for making new variables, for now, it only serves
+    to change the blur ammount in sections like the top bar and typing thing */
+/* 𝓯𝓻𝓮𝓪𝓴𝔂 */
+:root {
+    --blur-ammount-1: 50px;
+    --blur-ammount-2: 12px;
+    --font-primary: "Satoshi", Satoshi, "gg sans", sans-serif;
+    --font-secondary: "Poppins", "Satoshi", "gg-sans", sans-serif;
+}
+
+/* centralize everything that is repeated to one single thing */
+.themedBackground_d0696b,
+.autocompleteAttached_bea0d0,
+.buttons_d0696b,
+.attachWrapper_f298d4,
+.container_fc4f04,
+.container_fc4f04[role="navigation"],
+.container_b2ca13,
+.panels_a4d4d9,
+.container_a3d172,
+.channel_c91bad,
+.link_d8bfb3,
+.itemCard_f02fcf,
+.sidebar_a4d4d9,
+.chat_a7d72e,
+.section_cd82a7,
+.peopleListItem_d51464,
+.panels_a4d4d9 .container_adcaac,
+.activityPanel_a4d4d9,
+.avatarWrapper_b2ca13,
+.button_be03aa,
+.colorStreamerMode_be03aa,
+.container_c2739c,
+.typing_d7ebeb,
+.chatContent_a7d72e,
+.popover_e986d9,
+.replyBar_b11c5e,
+.lookFilled_dd4f85,
+.lookOutlined_dd4f85,
+.wrapper_f6639d .select_f6639d,
+.lookFilled_f6639d,
+.inputDefault_f8bc55,
+.container_c18ec9,
+.accountProfileCard_b69b77,
+.background_b69b77,
+.biteSizeInnerThemed_c69a7b,
+.container_f4c122,
+.tryItOutSection_eb2d2c,
+.side_a0 .item_a0,
+.row_e677b7,
+.root_f9a4c9 {
+    border-radius: 1rem !important;
+    --custom-base-tile-border-radius: 1em;
+}
+
+.radioBar_eb92a8.radioPositionLeft_eb92a8, .itemFilled_eb92a8 {
+    border-radius: 4px 1em 1em 4px;
+}
+
+.container_b6cd66 {
+    border-radius: 2em;
+}
+
+.menu_d90b3d,
+.upload_df1eaf,
+.searchBar_e0840f,
+.searchBar_f0963d .searchBarComponent_f0963d,
+.lookFilled_dd4f85.colorPrimary_dd4f85 {
+    border-radius: .5em;
+}
+
+.filename_f847a3 {
+    border-radius: .15rem;
+}
+
+.labelContainer_d90b3d {
+    border-radius: .25em !important;
+    transition: .1s;
+    /* background-color: rgb(20, 20, 20); */
+}
+
+.labelContainer_d90b3d:first-of-type {
+    border-radius: .5em .5em .25em .25em !important;
+}
+
+.labelContainer_d90b3d:last-of-type {
+    border-radius: .25em .25em .5em .5em !important;
+}
+
+.button_dd4f85[aria-label="Send a gift"],
+button[aria-label="Turn On Camera"],
+.button_f7e168:first-child {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.buttonContainer_d0696b:last-child,
+button[aria-label="Open Soundboard"],
+.button_f7e168:last-child {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.section_cd82a7,
+.themedBackground_d0696b,
+.replyBar_b11c5e,
+.autocompleteAttached_bea0d0,
+.peopleListItem_d51464:hover,
+.container_a3d172,
+.upload_df1eaf,
+.typing_d7ebeb {
+    outline: rgba(255, 255, 255, .15) solid 2px;
+}
+
+/* disable new button, and the "nitro" & "shop" buttons */
+.button_df39bd,
+.channelAppLauncher_df39bd,
+.channel_c91bad[aria-posinset="2"],
+.channel_c91bad:nth-child(4) {
+    display: none;
+}
+
+/* text message field */
+.themedBackground_d0696b {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-90%);
+    background: rgb(35, 36, 43, .5);
+    backdrop-filter: blur(var(--blur-ammount-2));
+}
+
+.attachedBars_d0696b {
+    height: 3rem;
+    transform: translateY(-2rem);
+    position: absolute;
+    bottom: 0;
+    width: calc(100% + 1px);
+    background-color: transparent;
+}
+
+.filename_f847a3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    padding: 5px;
+    font-size: .9rem;
+}
+
+.form_a7d72e:before {
+    background: transparent !important;
+    height: 1rem;
+}
+
+.textArea_d0696b {
+    /* transform: translateX(20px); */
+}
+
+.themedBackground_d0696b {
+    transform: translateY(-100%);
+}
+
+/* emoji floating thing */
+.autocompleteAttached_bea0d0 {
+    bottom: calc(100% + 48px);
+    background: rgb(35, 36, 43, 80%);
+    backdrop-filter: blur(var(--blur-ammount-1));
+    animation: appear .5s;
+}
+
+/* main chat padding */
+.messagesWrapper_e2e187 {
+    margin-bottom: 40px;
+}
+
+/* text message field icons */
+.attachButtonInner_f298d4 {
+    padding-left: 10px;
+    /* padding-bottom: 5px; */
+    padding-bottom: 2px;
+}
+
+.button_dd4f85[aria-label="Send a gift"]:hover,
+.buttonContainer_d0696b:hover {
+    background-color: rgba(255, 255, 255, .06);
+}
+
+/* current user/server you're in */
+.container_fc4f04 {
+    position: absolute !important;
+    --__header-bar-background: rgba(15, 15, 18, .5);
+    backdrop-filter: blur(var(--blur-ammount-1));
+    left: -1px;
+    height: calc(100% + 1px);
+}
+
+/* friends, nitro & shop section fixes from code of above */
+.headerBar_d175a8,
+.upperContainer_fc4f04,
+.container_fc4f04 {
+    position: relative;
+    height: auto;
+    width: calc(100% + 1px);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container_fc4f04[role="navigation"] {
+    position: sticky;
+    height: auto;
+    width: 80.5%;
+    left: 18vw !important;
+}
+
+@media (width < 1366px) {
+    .container_fc4f04[role="navigation"] {
+        width: 100vw;
+        transform: translateX(2.5rem);
+    }
+}
+
+.theme-dark .children_fc4f04:after {
+    background: transparent;
+}
+
+.peopleListItem_d51464 {
+    transform: translateY(1em);
+}
+
+.title_a1cafe {
+    padding: 1em;
+    margin-right: 40%;
+    margin-left: 40%;
+}
+
+.peopleColumn_c2739c {
+    margin-top: 3em;
+}
+
+.header_bf550a {
+    margin-top: 2.7em;
+    padding: .5em;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.header_bf550a,
+.title_a1cafe {
+    display: flex !important;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 8px;
+    color: white;
+    font-family: var(--font-secondary);
+    align-items: center;
+}
+
+.content_a4d4d9 {
+    background-color: var(--background-tertiary) !important;
+}
+
+/* search bar */
+.searchBar_f0963d .searchBarComponent_f0963d {
+    padding-left: .75rem;
+    outline: rgba(255, 255, 255, .05) solid 2px;
+}
+
+/* mute, deaf and settings button */
+.noWrap_ec1a20 {
+    /* background-color: rgba(255, 255, 255, .05) !important; */
+    /* transform: translateX(-5px) !important; */
+    border-radius: .75rem !important;
+}
+
+button.button_adca65[aria-label="Mute"] {
+    border-radius: .75rem 0 0 .75rem !important;
+}
+
+button.button_adca65[aria-label="User Settings"] {
+    border-radius: 0 .75rem .75rem 0 !important;
+}
+
+/* profile bar thing */
+.panels_a4d4d9 {
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
+    max-width: 14.5rem;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 50%);
+    outline: rgba(255, 255, 255, .05) solid 2px;
+    background-color: transparent;
+}
+
+.panels_a4d4d9 .container_adcaac,
+.activityPanel_a4d4d9 {
+    background: rgb(35, 36, 40) !important;
+    padding: 10px;
+}
+
+.inner_adcaac {
+    margin-top: 4px !important;
+    padding-left: 10px;
+}
+
+.horizontal_dc333f>.flex_dc333f,
+.horizontal_dc333f>.flexChild_dc333f {
+    transform: translateY(2px) !important;
+}
+
+.actionButtons_adcaac {
+    grid-gap: 0;
+    padding-top: 10px;
+    margin-right: -5px;
+    margin-left: -2px;
+}
+
+.connection_adcaac {
+    margin-right: -10px;
+    margin-left: 3px;
+}
+
+/* side bar and main chat configs */
+.sidebar_a4d4d9,
+.chat_a7d72e {
+    margin-bottom: .5em;
+    background-color: var(--background-secondary) !important;
+    margin-right: .5em;
+}
+
+.container_c2739c {
+    margin-right: .5rem !important;
+    margin-bottom: .5rem !important;
+}
+
+/* changing the default discord font */
+* {
+    font-family: var(--font-primary);
+}
+
+/* call stuff */
+.controlButton_b6e2f9 {
+    margin: 0 4px;
+    transform: translateX(-12px) !important;
+    background-color: transparent;
+}
+
+.justifyStart_ec1a20:not(.alignStretch_ec1a20)[style="flex: 0 1 auto;"] {
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent !important;
+}
+
+/* typing pop-up */
+.typing_d7ebeb {
+    padding: 5px 10px 5px 5px;
+    background: rgba(35, 36, 38, 0.3);
+    left: 10%;
+    margin: 0 40% 0 40%;
+    backdrop-filter: blur(50px);
+    animation: appear .5s;
+    width: fit-content;
+}
+
+.lookFilled_dd4f85.colorPrimary_dd4f85 {
+    outline: rgba(121, 101, 101, 0.3) solid 1px;
+}
+
+/* reply bar */
+.replyBar_b11c5e {
+    position: absolute;
+    padding: 10px 15px 10px 10px;
+    max-width: calc(100% - 5px);
+    margin: 0 40% 0 40%;
+    bottom: 1.5em;
+    background-color: rgba(0, 0, 100, .2);
+    backdrop-filter: blur(var(--blur-ammount-1));
+    animation: appear .25s;
+    left: 1.2px;
+}
+
+.replyBar_b11c5e:active {
+    animation: disappear .5s;
+}
+
+.replyLabel_b11c5e {
+    transform: translateX(-5px);
+}
+
+.closeButton_cb4d21 {
+    /* background-color: red; */
+    padding: 1em 4em .5em 5em;
+    transform: translateX(-135px);
+    position: absolute;
+    width: max-content;
+}
+
+.closeButton_cb4d21>svg {
+    opacity: 0;
+}
+
+/* reply bar & typing pop-up */
+.replyBar_b11c5e,
+.typing_d7ebeb {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* keyframes */
+@keyframes appear {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    to {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* streamer mode warning */
+.colorStreamerMode_be03aa {
+    margin: 0 .59em .5em 0;
+}
+
+/* clicked on profile pop-up */
+.body_b07019 {
+    margin-bottom: 2.5em;
+}
