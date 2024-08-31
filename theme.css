@@ -1,5 +1,6 @@
 /* may be useful later for making new variables, for now, it only serves
     to change the blur ammount in sections like the top bar and typing thing */
+/* 𝓯𝓻𝓮𝓪𝓴𝔂 */
 :root {
     --blur-ammount-1: 50px;
     --blur-ammount-2: 12px;
