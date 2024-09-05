@@ -52,12 +52,25 @@
 .row_e677b7,
 .root_f9a4c9,
 .vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root),
-.notice_be03aa {
+.notice_be03aa,
+.topPill_a0 .item_a0,
+.container_f8a938,
+.userPanelOuter_c69a7b,
+.scroller_c2b47d,
+.searchResultsWrap_c2b47d,
+.searchBar_a46bef,
+.flexible_d90b3d,
+.vc-addon-card,
+.vc-settings-card,
+.vc-settings-quickActions-card,
+.vc-plugins-info-card,
+#app-mount .container_eedf95 {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
 
-.radioBar_eb92a8.radioPositionLeft_eb92a8, .itemFilled_eb92a8 {
+.radioBar_eb92a8.radioPositionLeft_eb92a8,
+.itemFilled_eb92a8 {
     border-radius: 4px 1em 1em 4px;
 }
 
@@ -118,7 +131,8 @@ button[aria-label="Open Soundboard"],
 .button_df39bd,
 .channelAppLauncher_df39bd,
 .channel_c91bad[aria-posinset="2"],
-.channel_c91bad:nth-child(4) {
+.channel_c91bad:nth-child(4),
+.option_b0286e:after {
     display: none;
 }
 
@@ -246,7 +260,7 @@ button[aria-label="Open Soundboard"],
     display: flex !important;
     justify-content: center;
     background-color: rgba(255, 255, 255, .1);
-    border-radius: 8px;
+    border-radius: 2em;
     color: white;
     font-family: var(--font-secondary);
     align-items: center;
@@ -432,7 +446,8 @@ button.button_adca65[aria-label="User Settings"] {
 }
 
 /* streamer mode warning */
-.colorStreamerMode_be03aa, .notice_be03aa {
+.colorStreamerMode_be03aa,
+.notice_be03aa {
     margin: 0 .59em .5em 0;
 }
 
@@ -447,4 +462,36 @@ button.button_adca65[aria-label="User Settings"] {
     background-color: rgba(35, 36, 40, 50%);
     backdrop-filter: blur(50px);
     transform: translate(-.5em, -4.5em);
+}
+
+/* user panel */
+.userPanelOuter_c69a7b, .searchResultsWrap_c2b47d {
+    max-height: 92.5%;
+    transform: translateY(3.2em);
+    margin-left: .5em;
+}
+
+.searchResultsWrap_c2b47d {
+    max-height: 93%;
+}
+
+.banner_a823cd {
+    border-radius: 1em 1em 0 0;
+}
+
+/* background of e'erything */
+.content_a7d72e {
+    background-color: var(--background-tertiary);
+}
+
+/* search pop-up */
+.DraftEditor-root {
+    margin-left: 8px;
+}
+
+#app-mount .container_eedf95 {
+	background-color: var(--__header-bar-background);
+    border: 2px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(50px);
+    transform: translateX(-2.5em);
 }
