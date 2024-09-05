@@ -49,7 +49,8 @@
 .side_a0 .item_a0,
 .row_e677b7,
 .root_f9a4c9,
-.vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root) {
+.vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root),
+.notice_be03aa {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -429,7 +430,7 @@ button.button_adca65[aria-label="User Settings"] {
 }
 
 /* streamer mode warning */
-.colorStreamerMode_be03aa {
+.colorStreamerMode_be03aa, .notice_be03aa {
     margin: 0 .59em .5em 0;
 }
 
