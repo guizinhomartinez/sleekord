@@ -64,7 +64,13 @@
 .vc-settings-card,
 .vc-settings-quickActions-card,
 .vc-plugins-info-card,
-#app-mount .container_eedf95 {
+#app-mount .container_eedf95,
+.container_ddc613,
+.highlight,
+.channelNameContainer_a9e225,
+.searchBar_f0963d .searchBarComponent_f0963d,
+.overlayBackground_c69a7b,
+.listRow_d2d6cb {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -81,7 +87,6 @@
 .menu_d90b3d,
 .upload_df1eaf,
 .searchBar_e0840f,
-.searchBar_f0963d .searchBarComponent_f0963d,
 .lookFilled_dd4f85.colorPrimary_dd4f85 {
     border-radius: .5em;
 }
@@ -91,17 +96,9 @@
 }
 
 .labelContainer_d90b3d {
-    border-radius: .25em !important;
+    border-radius: .75em !important;
     transition: .1s;
     /* background-color: rgb(20, 20, 20); */
-}
-
-.labelContainer_d90b3d:first-of-type {
-    border-radius: .5em .5em .25em .25em !important;
-}
-
-.labelContainer_d90b3d:last-of-type {
-    border-radius: .25em .25em .5em .5em !important;
 }
 
 .button_dd4f85[aria-label="Send a gift"],
@@ -120,7 +117,6 @@ button[aria-label="Open Soundboard"],
 .themedBackground_d0696b,
 .replyBar_b11c5e,
 .autocompleteAttached_bea0d0,
-.peopleListItem_d51464:hover,
 .container_a3d172,
 .upload_df1eaf,
 .typing_d7ebeb {
@@ -235,7 +231,12 @@ button[aria-label="Open Soundboard"],
 }
 
 .peopleListItem_d51464 {
-    transform: translateY(1em);
+    margin-top: 10px;
+    transition-duration: .5s;
+}
+
+.peopleListItem_d51464:hover {
+    margin-top: 10px;
 }
 
 .title_a1cafe {
@@ -277,8 +278,8 @@ button[aria-label="Open Soundboard"],
 }
 
 /* mute, deaf and settings button */
-.noWrap_ec1a20 {
-    /* background-color: rgba(255, 255, 255, .05) !important; */
+.noWrap_ec1a20:not(.footerSeparator_f9a4c9) {
+    background-color: rgba(255, 255, 255, .05) !important;
     transform: translateX(-5px) !important;
     border-radius: .75rem !important;
 }
@@ -344,7 +345,7 @@ button.button_adca65[aria-label="User Settings"] {
 }
 
 /* changing the default discord font */
-* {
+*, .title_cd377c {
     font-family: var(--font-primary);
 }
 
@@ -445,6 +446,29 @@ button.button_adca65[aria-label="User Settings"] {
     }
 }
 
+/* jump to present bar */
+.jumpToPresentBar_cf58b5 {
+    display: flex;
+    max-width: 40%;
+    bottom: 20px;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.barButtonBase_cf58b5 {
+    top: 2px;
+}
+
+/* new messages bar */
+.newMessagesBar_cf58b5 {
+    top: 3em;
+    border-radius: 1em;
+    max-width: 50%;
+    margin: auto;
+}
+
 /* streamer mode warning */
 .colorStreamerMode_be03aa,
 .notice_be03aa {
@@ -471,10 +495,6 @@ button.button_adca65[aria-label="User Settings"] {
     margin-left: .5em;
 }
 
-.searchResultsWrap_c2b47d {
-    max-height: 93%;
-}
-
 .banner_a823cd {
     border-radius: 1em 1em 0 0;
 }
@@ -494,4 +514,31 @@ button.button_adca65[aria-label="User Settings"] {
     border: 2px solid rgba(255, 255, 255, .1);
     backdrop-filter: blur(50px);
     transform: translateX(-2.5em);
+}
+
+.highlight {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.channelNameContainer_a9e225 {
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .1);
+    margin-right: 2em;
+    margin-left: 2em;
+    border-radius: 1em;
+}
+
+.searchResultsWrap_c2b47d {
+    max-height: 93%;
+}
+
+/* question when you just joined a server */
+.questionHeader_cd377c {
+    justify-content: center;
+}
+
+.title_cd377c {
+    display: flex;
+    justify-content: center;
 }
