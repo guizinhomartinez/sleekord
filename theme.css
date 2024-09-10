@@ -70,7 +70,8 @@ to change the blur ammount in sections like the top bar and typing thing */
 .channelNameContainer_a9e225,
 .searchBar_f0963d .searchBarComponent_f0963d,
 .overlayBackground_c69a7b,
-.listRow_d2d6cb {
+.listRow_d2d6cb,
+.searchBar_e7c031 {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -208,7 +209,7 @@ button[aria-label="Open Soundboard"],
 .container_fc4f04 {
     position: relative;
     height: auto;
-    width: calc(100% + 1px);
+    max-width: calc(100% + 1px);
     border-radius: 0 0 1rem 1rem;
 }
 
@@ -221,8 +222,8 @@ button[aria-label="Open Soundboard"],
 
 @media (width < 1366px) {
     .container_fc4f04[role="navigation"] {
-        width: 100vw;
-        transform: translateX(2.5rem);
+        width: 76.5vw;
+        transform: translateX(0rem);
     }
 }
 
@@ -278,7 +279,7 @@ button[aria-label="Open Soundboard"],
 }
 
 /* mute, deaf and settings button */
-.noWrap_ec1a20:not(.footerSeparator_f9a4c9) {
+.noWrap_ec1a20:not(.footerSeparator_f9a4c9, .justifyCenter_ec1a20, .marginBottom20_f7730b, .volume) {
     background-color: rgba(255, 255, 255, .05) !important;
     transform: translateX(-5px) !important;
     border-radius: .75rem !important;
@@ -335,6 +336,7 @@ button.button_adca65[aria-label="User Settings"] {
 .sidebar_a4d4d9,
 .chat_a7d72e {
     margin-bottom: .5em;
+    margin-top: .5em;
     background-color: var(--background-secondary) !important;
     margin-right: .5em;
 }
@@ -342,6 +344,7 @@ button.button_adca65[aria-label="User Settings"] {
 .container_c2739c {
     margin-right: .5rem !important;
     margin-bottom: .5rem !important;
+    margin-top: .5em;
 }
 
 /* changing the default discord font */
