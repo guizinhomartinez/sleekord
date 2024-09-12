@@ -81,15 +81,21 @@ to change the blur ammount in sections like the top bar and typing thing */
     border-radius: 4px 1em 1em 4px;
 }
 
-.container_b6cd66 {
+.container_b6cd66,
+.submenuPaddingContainer_d90b3d {
     border-radius: 2em;
 }
 
 .menu_d90b3d,
 .upload_df1eaf,
 .searchBar_e0840f,
-.lookFilled_dd4f85.colorPrimary_dd4f85 {
+.lookFilled_dd4f85.colorPrimary_dd4f85,
+.colorDefault_d90b3d {
     border-radius: .5em;
+}
+
+.colorDefault_d90b3d {
+    padding: 2px;
 }
 
 .filename_f847a3 {
@@ -475,7 +481,7 @@ button.button_adca65[aria-label="User Settings"] {
 /* streamer mode warning */
 .colorStreamerMode_be03aa,
 .notice_be03aa {
-    margin: 0 .59em .5em 0;
+    margin: .5em .59em 0 0;
 }
 
 /* clicked on profile pop-up */
