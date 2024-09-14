@@ -71,7 +71,8 @@ to change the blur ammount in sections like the top bar and typing thing */
 .searchBar_f0963d .searchBarComponent_f0963d,
 .overlayBackground_c69a7b,
 .listRow_d2d6cb,
-.searchBar_e7c031 {
+.searchBar_e7c031,
+.members_cbd271 {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -186,6 +187,10 @@ button[aria-label="Open Soundboard"],
 /* main chat padding */
 .messagesWrapper_e2e187 {
     margin-bottom: 40px;
+}
+
+.members_cbd271 {
+    margin-left: .5em;
 }
 
 /* text message field icons */
@@ -487,6 +492,44 @@ button.button_adca65[aria-label="User Settings"] {
 /* clicked on profile pop-up */
 .body_b07019 {
     margin-bottom: 2.5em;
+}
+
+.tabBar_ecc04c {
+    border-bottom: none;
+    margin: auto;
+    background-color: var(--background-primary);
+    border-radius: 1em;
+    height: 32px;
+    transform: translate(0, 7px);
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    gap: 5px;
+}
+
+.tabBar_ecc04c .tabBarItem_ecc04c {
+    border-bottom: none;
+    padding: 4px;
+    height: 32px;
+    min-height: 32px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    border-radius: 3em;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    transition: .25s;
+    margin-bottom: 10px;
+}
+
+.tabBar_ecc04c .tabBarItem_ecc04c:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.top_a0 .selected_a0.themed_a0.item_a0 {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* vencord notification */
