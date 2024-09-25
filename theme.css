@@ -6,7 +6,7 @@ to change the blur ammount in sections like the top bar and typing thing */
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 :root {
-    --blur-ammount-1: 50px;
+    --blur-ammount: 50px;
     --font-primary: "SF Pro Display", Satoshi, "gg sans", sans-serif;
 }
 
@@ -204,7 +204,7 @@ button[aria-label="Open Soundboard"],
 .autocompleteAttached_bea0d0 {
     bottom: calc(100% + 48px);
     background: rgb(35, 36, 43, 80%);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     animation: appear .5s;
 }
 
@@ -234,7 +234,7 @@ button[aria-label="Open Soundboard"],
 .container_fc4f04 {
     position: absolute !important;
     --__header-bar-background: rgba(15, 15, 18, .5);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     height: calc(100% + 1px);
 }
 
@@ -409,7 +409,7 @@ button.button_adca65[aria-label="User Settings"] {
     background: rgba(35, 36, 38, 0.3);
     right: 10px;
     width: fit-content;
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     animation: appear .5s;
     width: fit-content;
     bottom: 40px;
@@ -427,7 +427,7 @@ button.button_adca65[aria-label="User Settings"] {
     margin: 0 40% 0 40%;
     bottom: 1.5em;
     background-color: rgba(0, 0, 100, .2);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     animation: appear .25s;
     left: 1.2px;
 }
@@ -572,12 +572,11 @@ button.button_adca65[aria-label="User Settings"] {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-
 /* vencord notification */
 .vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root) {
     /* background-color: rgba(var(--background-secondary-alt), 100%); */
     background-color: rgba(35, 36, 40, 50%);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     transform: translate(-.5em, -4.5em);
 }
 
@@ -606,7 +605,7 @@ button.button_adca65[aria-label="User Settings"] {
 #app-mount .container_eedf95 {
     background-color: var(--__header-bar-background);
     border: 2px solid rgba(255, 255, 255, .1);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     transform: translateX(-2.5em);
 }
 
