@@ -314,7 +314,7 @@ button[aria-label="Open Soundboard"],
 }
 
 /* mute, deaf and settings button */
-.noWrap_ec1a20:not(.footerSeparator_f9a4c9, .justifyCenter_ec1a20, .marginBottom20_f7730b, .volume, .noWrap_ec1a20[style="flex: 1 1 auto;"], .noWrap_ec1a20[style="flex: 0 0 auto;"]) {
+.noWrap_ec1a20:not(.footerSeparator_f9a4c9, .justifyCenter_ec1a20, .marginBottom20_f7730b, .volume, .noWrap_ec1a20[style="flex: 1 1 auto;"], .noWrap_ec1a20[style="flex: 0 0 auto;"], .justifyEnd_ec1a20) {
     background-color: rgba(255, 255, 255, .05) !important;
     transform: translateX(-5px) !important;
     border-radius: .75rem !important;
@@ -754,10 +754,24 @@ button[aria-label="Noise Suppression powered by Krisp"] {
     box-shadow: 0 0px 20px 5px rgba(17, 18, 20);
 }
 
+.wrapper_d880dc .container_fc4f04 {
+    background-color: transparent !important;
+    backdrop-filter: blur(0);
+}
+
 .videoGridWrapper_bae578 {
     background: linear-gradient(90deg, var(--background-floating), 60%, var(--background-tertiary));
 }
 
 .callContainer_d880dc {
     border-radius: 1em;
+}
+
+.quickSelect_abbf45 {
+    margin-top: 50px;
+    margin-right: -6px;
+}
+
+.quickSelectValue_abbf45, .quickSelectArrow_abbf45 {
+    padding: 2px 4px;
 }
