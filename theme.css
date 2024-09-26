@@ -164,7 +164,8 @@ button[aria-label="Open Soundboard"],
 .channelAppLauncher_df39bd,
 .channel_c91bad[aria-posinset="2"],
 .channel_c91bad:nth-child(4),
-.option_b0286e:after {
+.option_b0286e:after,
+.item_a0[aria-label="Merch"] {
     display: none;
 }
 
@@ -727,4 +728,36 @@ button.button_adca65[aria-label="User Settings"] {
 /* hover image buttons */
 .hoverButton_d0395d {
     border-left: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+/* leave call and krisp audio buttons */
+.horizontal_dc333f>.flex_dc333f:last-child, .horizontal_dc333f>.flexChild_dc333f:last-child {
+    margin-right: 5px;
+    background-color: var(--background-primary);
+    padding: 2.5px;
+    border-radius: 2em;
+}
+
+/* call container stuff */
+button.button_adca65, span.button_adca65[aria-label="Disconnect"] {
+    border-radius: 0 2em 2em 0;
+}
+
+button[aria-label="Noise Suppression powered by Krisp"] {
+    border-radius: 2em 0 0 2em;
+}
+
+.wrapper_d880dc {
+    border-radius: 1em;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0px 20px 5px rgba(17, 18, 20);
+}
+
+.videoGridWrapper_bae578 {
+    background: linear-gradient(90deg, var(--background-floating), 60%, var(--background-tertiary));
+}
+
+.callContainer_d880dc {
+    border-radius: 1em;
 }
