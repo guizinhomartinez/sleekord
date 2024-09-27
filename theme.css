@@ -6,7 +6,7 @@ to change the blur ammount in sections like the top bar and typing thing */
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 :root {
-    --blur-ammount-1: 50px;
+    --blur-ammount: 50px;
     --font-primary: "SF Pro Display", Satoshi, "gg sans", sans-serif;
 }
 
@@ -81,13 +81,17 @@ to change the blur ammount in sections like the top bar and typing thing */
 .hoverButtonGroup_d0395d,
 .popout_f6639d,
 .container_cbd271,
-.list_a6d69a, .grid_a6d69a,
+.list_a6d69a,
+.grid_a6d69a,
 .indentCharacterCount_d0696b,
-.jumpToPresentBar_cf58b5m,
+.jumpToPresentBar_cf58b5,
 .newMessagesBar_cf58b5,
 .tabBar_ecc04c,
 .channelNameContainer_a9e225,
-.full-motion .container_d331f1 {
+.full-motion .container_d331f1,
+.barButtonAlt_cf58b5,
+.callContainer_d880dc,
+.wrapper_d880dc {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -104,7 +108,10 @@ to change the blur ammount in sections like the top bar and typing thing */
 .channel_c91bad,
 .header_bf550a,
 .title_a1cafe,
-.form_c1668f .submitButton_c1668f {
+.form_c1668f .submitButton_c1668f,
+.selectedBackground_ae3c77,
+.horizontal_dc333f>.flex_dc333f:last-child,
+.horizontal_dc333f>.flexChild_dc333f:last-child {
     border-radius: 2em;
 }
 
@@ -175,7 +182,12 @@ button[aria-label="Open Soundboard"],
     width: 100%;
     transform: translateY(-90%);
     background: rgb(35, 36, 43, .5);
-    backdrop-filter: blur(var(--blur-ammount-2));
+    backdrop-filter: blur(var(--blur-ammount));
+    transform: translateY(-100%);
+}
+
+.innerDisabled_d0696b, .channelTextAreaDisabled_d0696b .scrollableContainer_d0696b {
+    opacity: 0;
 }
 
 .attachedBars_d0696b {
@@ -205,13 +217,15 @@ button[aria-label="Open Soundboard"],
 .autocompleteAttached_bea0d0 {
     bottom: calc(100% + 48px);
     background: rgb(35, 36, 43, 80%);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     animation: appear .5s;
 }
 
 /* main chat padding */
 .messagesWrapper_e2e187 {
-    margin-bottom: 40px;
+    bottom: 40px;
+    border-radius: 2em;
+    background-color: linear-gradient(180deg, var(--background-primary), var(--background-tertiary));
 }
 
 .members_cbd271 {
@@ -235,7 +249,7 @@ button[aria-label="Open Soundboard"],
 .container_fc4f04 {
     position: absolute !important;
     --__header-bar-background: rgba(15, 15, 18, .5);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     height: calc(100% + 1px);
 }
 
@@ -382,6 +396,10 @@ button.button_adca65[aria-label="User Settings"] {
     margin-top: .5em;
 }
 
+.scroller_c43953 {
+    transform: translateY(-60px);
+}
+
 /* changing the default discord font */
 *,
 .title_cd377c {
@@ -408,12 +426,13 @@ button.button_adca65[aria-label="User Settings"] {
 .typing_d7ebeb {
     padding: 5px 10px 5px 5px;
     background: rgba(35, 36, 38, 0.3);
-    right: 10px;
+    margin-right: 5px;
+    margin-left: auto;
     width: fit-content;
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     animation: appear .5s;
     width: fit-content;
-    bottom: 40px;
+    bottom: 80px;
 }
 
 .lookFilled_dd4f85.colorPrimary_dd4f85 {
@@ -428,7 +447,7 @@ button.button_adca65[aria-label="User Settings"] {
     margin: 0 40% 0 40%;
     bottom: 1.5em;
     background-color: rgba(0, 0, 100, .2);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     animation: appear .25s;
     left: 1.2px;
 }
@@ -463,12 +482,12 @@ button.button_adca65[aria-label="User Settings"] {
 
 /* keyframes */
 @keyframes appear {
-    from {
+    0%, 10% {
         transform: translateY(50px);
         opacity: 0;
     }
 
-    to {
+    90%, 100% {
         transform: translateY(0);
         opacity: 1;
     }
@@ -496,6 +515,15 @@ button.button_adca65[aria-label="User Settings"] {
     margin: auto;
 }
 
+.jumpToPresentBar_cf58b5 > button {
+    height: 25px;
+    transform: translateY(2px);
+}
+
+.jumpToPresentBar_cf58b5 > button:nth-child(2):hover {
+    background-color: var(--background-primary) !important;
+}
+
 /* new messages bar */
 .newMessagesBar_cf58b5 {
     top: 3.2em;
@@ -509,11 +537,9 @@ button.button_adca65[aria-label="User Settings"] {
     margin-left: 2px;
     transition-property: background-color;
     transition-duration: .25s;
-    border-radius: 1em;
-
 }
 
-.barButtonAlt_cf58b5 > svg {
+.barButtonAlt_cf58b5>svg {
     display: none;
 }
 
@@ -574,7 +600,7 @@ button.button_adca65[aria-label="User Settings"] {
 .vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root) {
     /* background-color: rgba(var(--background-secondary-alt), 100%); */
     background-color: rgba(35, 36, 40, 50%);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     transform: translate(-.5em, -4.5em);
 }
 
@@ -603,7 +629,7 @@ button.button_adca65[aria-label="User Settings"] {
 #app-mount .container_eedf95 {
     background-color: var(--__header-bar-background);
     border: 2px solid rgba(255, 255, 255, .1);
-    backdrop-filter: blur(var(--blur-ammount-1));
+    backdrop-filter: blur(var(--blur-ammount));
     transform: translateX(-2.5em);
 }
 
@@ -659,7 +685,7 @@ button.button_adca65[aria-label="User Settings"] {
     transform: translateY(20px);
 }
 
-.floating_d1c246 > .container_fc4f04 {
+.floating_d1c246>.container_fc4f04 {
     border-radius: 1em 0 1em 1em !important;
 }
 
@@ -712,7 +738,13 @@ button.button_adca65[aria-label="User Settings"] {
 }
 
 /* fonts customization */
-.h1_c46f6a, .title_c1668f, .postTitleText_d331f1, .membersGroup_cbd271, .header_e378b3 {
+.h1_c46f6a,
+.title_c1668f,
+.postTitleText_d331f1,
+.membersGroup_cbd271,
+.header_e378b3,
+.headerText_c47fa9,
+.overflow_a82120 {
     font-family: var(--font-primary);
     font-weight: 800;
 }
@@ -725,21 +757,41 @@ button.button_adca65[aria-label="User Settings"] {
     transform: translateX(5px);
 }
 
+.optionBox_f2f431 {
+    border-radius: 1em;
+}
+
 /* hover image buttons */
-.hoverButton_d0395d {
-    border-left: 1px solid rgb(255, 255, 255, 0.2);
+.hoverButtonGroup_d0395d {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.hoverButtonGroup_d0395d>div {
+    transition: .1s ease-out !important;
+    border-radius: 100%;
+}
+
+.hoverButtonGroup_d0395d>div:hover:first-child {
+    scale: 120% !important;
+}
+
+.hoverButtonGroup_d0395d>div:hover:last-child {
+    scale: 110% !important;
 }
 
 /* leave call and krisp audio buttons */
-.horizontal_dc333f>.flex_dc333f:last-child, .horizontal_dc333f>.flexChild_dc333f:last-child {
+.horizontal_dc333f>.flex_dc333f:last-child,
+.horizontal_dc333f>.flexChild_dc333f:last-child {
     margin-right: 5px;
     background-color: var(--background-primary);
     padding: 2.5px;
-    border-radius: 2em;
 }
 
 /* call container stuff */
-button.button_adca65, span.button_adca65[aria-label="Disconnect"] {
+button.button_adca65,
+span.button_adca65[aria-label="Disconnect"] {
     border-radius: 0 2em 2em 0;
 }
 
@@ -748,10 +800,9 @@ button[aria-label="Noise Suppression powered by Krisp"] {
 }
 
 .wrapper_d880dc {
-    border-radius: 1em;
     position: absolute;
     width: 100%;
-    box-shadow: 0 0px 20px 5px rgba(17, 18, 20);
+    box-shadow: 0 0px 20px 5px var(--elevation-low);
 }
 
 .wrapper_d880dc .container_fc4f04 {
@@ -772,6 +823,16 @@ button[aria-label="Noise Suppression powered by Krisp"] {
     margin-right: -6px;
 }
 
-.quickSelectValue_abbf45, .quickSelectArrow_abbf45 {
+.quickSelectValue_abbf45,
+.quickSelectArrow_abbf45 {
     padding: 2px 4px;
+}
+
+/* new message animation */
+.cozyMessage_d5deea.groupStart_d5deea:last-child, .messageListItem_d5deea:last-child, .markup_f8f345 {
+    animation: appear .5s;
+}
+
+.interactive_f5eb4b, .link_d8bfb3 {
+    transition-duration: .25s;
 }
