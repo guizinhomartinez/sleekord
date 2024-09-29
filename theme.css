@@ -117,9 +117,12 @@ to change the blur ammount in sections like the top bar and typing thing */
 
 .cozy_f9f2ca .messageContent_f9f2ca,
 .container_b558d0,
-.imageWrapper_d4597d,
 .header_a6d69a {
     border-radius: 1.5em;
+}
+
+.imageWrapper_d4597d {
+    border-radius: 12px;
 }
 
 .wrapper_fb6520 .imageWrapper_d4597d {
@@ -225,7 +228,7 @@ button[aria-label="Open Soundboard"],
 .messagesWrapper_e2e187 {
     bottom: 40px;
     border-radius: 2em;
-    background-color: linear-gradient(180deg, var(--background-primary), var(--background-tertiary));
+    /* background-color: linear-gradient(180deg, var(--background-primary), var(--background-tertiary)); */
 }
 
 .members_cbd271 {
@@ -835,4 +838,17 @@ button[aria-label="Noise Suppression powered by Krisp"] {
 
 .interactive_f5eb4b, .link_d8bfb3 {
     transition-duration: .25s;
+}
+
+.header_fd6364 {
+    background-color: var(--__header-bar-background);
+    backdrop-filter: blur(var(--blur-ammount));
+}
+
+.notice_c02a8d {
+    transform: translateY(49px);
+    z-index: 1000;
+    border-radius: 1em;
+    margin-right: 10px;
+    margin-left: 10px;
 }
