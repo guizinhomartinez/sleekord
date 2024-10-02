@@ -352,6 +352,10 @@ button.button_adca65[aria-label="Mute"] {
     border-radius: .75rem 0 0 .75rem !important;
 }
 
+button.button_dd4f85[aria-label="Deafen"] {
+    border-radius: 0 !important;
+}
+
 button.button_adca65[aria-label="User Settings"] {
     border-radius: 0 .75rem .75rem 0 !important;
 }
