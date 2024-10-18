@@ -96,7 +96,11 @@
 .contentWrapper_af5dbb,
 .navButtonActive_af5dbb,
 .navButton_af5dbb:hover,
-.container_c15230 {
+.container_c15230,
+.uploadDropModal_f82cc7,
+.uploadDropModal_f82cc7 .inner_f82cc7,
+.uploadDropModal_f82cc7.error_f82cc7 .icon_f82cc7.two_f82cc7,
+.connectedAccountContainer_ab12c6 {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -242,11 +246,6 @@ button[aria-label="Open Soundboard"],
     bottom: 40px;
 }
 
-.members_cbd271 {
-    margin-left: .5em;
-    margin-top: 35px;
-}
-
 /* text message field icons */
 .attachButtonInner_f298d4 {
     padding-left: 10px;
@@ -327,7 +326,6 @@ button[aria-label="Open Soundboard"],
     justify-content: center;
     background-color: rgba(255, 255, 255, .1);
     color: white;
-    font-family: var(--font-primary);
     align-items: center;
 }
 
@@ -446,12 +444,6 @@ button.button_adca65[aria-label="User Settings"] {
 
 .container_b558d0>* {
     border-radius: 4px 1em 1em 4px;
-}
-
-/* changing the default discord font */
-*,
-.title_cd377c {
-    font-family: var(--font-primary);
 }
 
 /* call stuff */
@@ -621,6 +613,10 @@ button.button_adca65[aria-label="User Settings"] {
     gap: 5px;
 }
 
+.tabBar_ecc04c>div {
+    padding: 0 10px;
+}
+
 .tabBar_ecc04c .tabBarItem_ecc04c {
     border-bottom: none;
     padding: 4px;
@@ -646,6 +642,13 @@ button.button_adca65[aria-label="User Settings"] {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+.top_a0 .selected_a0.themed_a0.item_a0>.text-sm\/normal_dc00ef {
+    font-weight: 800;
+}
+
+.connectedAccountContainer_ab12c6 {
+    background-color: var(--profile-body-divider-color,var(--background-modifier-accent));
+}
 
 /* vencord notification */
 .vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root) {
@@ -796,9 +799,24 @@ button.button_adca65[aria-label="User Settings"] {
 .membersGroup_cbd271,
 .header_e378b3,
 .headerText_c47fa9,
-.overflow_a82120 {
+.overflow_a82120,
+.header_bf550a,
+.title_a1cafe,
+.headerText_ae1fa2 {
     font-family: var(--font-primary);
     font-weight: 800;
+}
+
+*,
+.title_cd377c,
+.markup_f8f345 h1,
+.markup_f8f345 h2,
+.markup_f8f345 h3,
+.heading-sm\/semibold_dc00ef,
+.text_b5cd55,
+.nickname_c32acf,
+.badgeContainer_d60c6d div {
+    font-family: var(--font-primary);
 }
 
 /* profile customization section in settings */
@@ -876,11 +894,11 @@ button[aria-label="Noise Suppression powered by Krisp"] {
 }
 
 /* new message animation */
-.cozyMessage_d5deea.groupStart_d5deea:last-child,
-.messageContent_f9f2ca:not(.isSending_f9f2ca, .alt_f9f2ca),
-.markup_f8f345:not(.isSending_f9f2ca, .alt_f9f2ca, .fontSize16Padding_d0696b) {
+/* .cozyMessage_d5deea.groupStart_d5deea:last-child,
+.messageContent_f9f2ca:not(.isSending_f9f2ca, .alt_f9f2ca, .messageContent_d331f1),
+.markup_f8f345:not(.isSending_f9f2ca, .alt_f9f2ca, .fontSize16Padding_d0696b, .messageContent_d331f1, .defaultColor_a595eb .text-sm\/normal_dc00ef) {
     animation: appear .5s;
-}
+} giving me too much headache at the moment will work on it later */
 
 .interactive_f5eb4b,
 .link_d8bfb3 {
