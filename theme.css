@@ -1,11 +1,11 @@
-/* may be useful later for making new variables, for now, it only serves
-to change the blur ammount in sections like the top bar and typing thing */
 /* 𝓯𝓻𝓮𝓪𝓴𝔂 */
 
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 :root {
+    /* may be useful later for making new variables, for now, it only serves
+    to change the blur ammount in sections like the top bar and typing thing */
     --blur-ammount: 50px;
     --font-primary: "SF Pro Display", Satoshi, "gg sans", sans-serif;
 }
@@ -342,7 +342,15 @@ button[aria-label="Open Soundboard"],
 }
 
 /* mute, deaf and settings button */
-.noWrap_ec1a20:not(.footerSeparator_f9a4c9, .justifyCenter_ec1a20, .marginBottom20_f7730b, .volume, .noWrap_ec1a20[style="flex: 1 1 auto;"], .noWrap_ec1a20[style="flex: 0 0 auto;"], .justifyEnd_ec1a20) {
+.noWrap_ec1a20:not(
+        .footerSeparator_f9a4c9,
+        .justifyCenter_ec1a20,
+        .marginBottom20_f7730b,
+        .volume,
+        .noWrap_ec1a20[style="flex: 1 1 auto;"],
+        .noWrap_ec1a20[style="flex: 0 0 auto;"],
+        .justifyEnd_ec1a20
+    ) {
     background-color: rgba(255, 255, 255, .05) !important;
     transform: translateX(-5px) !important;
     border-radius: .75rem !important;
