@@ -1,8 +1,0 @@
-/* vencord notifications. does not apply to other discord css modifiers like betterdiscord */
-
-.vc-notification-root:not(.vc-notification-log-wrapper > .vc-notification-root) {
-    /* background-color: rgba(var(--background-secondary-alt), 100%); */
-    background-color: rgba(35, 36, 40, 50%);
-    backdrop-filter: blur(var(--blur-ammount));
-    transform: translate(-.5em, -4.5em);
-}

@@ -552,6 +552,7 @@ button.button_adca65[aria-label="User Settings"] {
 
 /* keyframes */
 @keyframes appear {
+
     0%,
     10% {
         transform: translateY(50px);
@@ -613,8 +614,6 @@ button.button_adca65[aria-label="User Settings"] {
 .barButtonAlt_cf58b5:hover {
     background-color: #727df8;
 }
-
-/* stopped transfering all the settings to separate folders here */
 
 /* streamer mode warning */
 .colorStreamerMode_be03aa,
