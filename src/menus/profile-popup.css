@@ -1,0 +1,47 @@
+/* panel that opens when clicking on "show profile" in a person */
+
+.body_b07019 {
+    margin-bottom: 2.5em;
+}
+
+.tabBar_ecc04c {
+    border-bottom: none;
+    margin: auto;
+    background-color: var(--background-primary);
+    height: 32px;
+    transform: translate(0, 7px);
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    gap: 5px;
+}
+
+.tabBar_ecc04c>div {
+    padding: 0 10px;
+}
+
+.tabBar_ecc04c .tabBarItem_ecc04c {
+    border-bottom: none;
+    padding: 4px;
+    height: 32px;
+    min-height: 32px;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    font-size: 14px;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabBar_ecc04c .tabBarItem_ecc04c:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.top_a0 .selected_a0.themed_a0.item_a0 {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.connectedAccountContainer_ab12c6 {
+    background-color: var(--profile-body-divider-color, var(--background-modifier-accent));
+}

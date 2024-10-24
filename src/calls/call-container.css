@@ -1,0 +1,35 @@
+/* call container css */
+
+button.button_adca65,
+span.button_adca65[aria-label="Disconnect"] {
+    border-radius: 0 2em 2em 0;
+}
+
+button[aria-label="Noise Suppression powered by Krisp"] {
+    border-radius: 2em 0 0 2em;
+}
+
+.wrapper_d880dc {
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0px 20px 5px var(--elevation-low);
+}
+
+.wrapper_d880dc .container_fc4f04 {
+    background-color: transparent !important;
+    backdrop-filter: blur(0);
+}
+
+.videoGridWrapper_bae578 {
+    background: linear-gradient(90deg, var(--background-floating), 60%, var(--background-tertiary));
+}
+
+.quickSelect_abbf45 {
+    margin-top: 50px;
+    margin-right: -6px;
+}
+
+.quickSelectValue_abbf45,
+.quickSelectArrow_abbf45 {
+    padding: 2px 4px;
+}

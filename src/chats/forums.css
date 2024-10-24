@@ -1,0 +1,29 @@
+.container_a6d69a {
+    margin-top: 40px;
+}
+
+.form_c1668f .submitButton_c1668f {
+    transform: translateX(15px);
+}
+
+.container_d1c246 {
+    border-radius: 1em 0 0 1em;
+    margin-right: .5em;
+}
+
+.headerWithMatchingPosts_a6d69a {
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.matchingPostsRow_a6d69a {
+    border-radius: 0 0 1.5em 1.5em;
+    padding-right: 12px;
+}
+
+.scrollerInner_e2e187 {
+    transform: translateY(20px);
+}
+
+.floating_d1c246>.container_fc4f04 {
+    border-radius: 1em 0 1em 1em !important;
+}

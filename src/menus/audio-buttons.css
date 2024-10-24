@@ -1,0 +1,8 @@
+/* leave call and krisp audio buttons */
+
+.horizontal_dc333f>.flex_dc333f:last-child,
+.horizontal_dc333f>.flexChild_dc333f:last-child {
+    margin-right: 5px;
+    background-color: var(--background-primary);
+    padding: 2.5px;
+}

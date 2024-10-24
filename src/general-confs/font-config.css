@@ -1,0 +1,38 @@
+/* setting custom font css */
+
+*,
+.title_cd377c,
+.markup_f8f345 h1,
+.markup_f8f345 h2,
+.markup_f8f345 h3,
+.heading-sm\/semibold_dc00ef,
+.text_b5cd55,
+.nickname_c32acf,
+.badgeContainer_d60c6d div,
+.title_aef5fd,
+.h1_c46f6a,
+.title_c1668f,
+.postTitleText_d331f1,
+.membersGroup_cbd271,
+.header_e378b3,
+.headerText_c47fa9,
+.overflow_a82120,
+.header_bf550a,
+.title_a1cafe,
+.headerText_ae1fa2 {
+    font-family: var(--font-primary);
+}
+
+.h1_c46f6a,
+.title_c1668f,
+.postTitleText_d331f1,
+.membersGroup_cbd271,
+.header_e378b3,
+.headerText_c47fa9,
+.overflow_a82120,
+.header_bf550a,
+.title_a1cafe,
+.headerText_ae1fa2,
+.top_a0 .selected_a0.themed_a0.item_a0>.text-sm\/normal_dc00ef {
+    font-weight: 800;
+}

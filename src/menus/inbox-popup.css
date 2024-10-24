@@ -1,0 +1,30 @@
+/* inbox menu settings */
+
+.tabBar_f0cd33 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    gap: 10px;
+    background-color: var(--background-primary);
+    width: max-content;
+    border-radius: 3em;
+    height: 36px;
+}
+
+.top_a0 .item_a0 {
+    border: transparent !important;
+    margin: 0;
+    padding: 0 16px;
+    border-radius: 3em;
+}
+
+.top_a0 .item_a0:hover,
+.top_a0 .brand_a0.selected_a0.item_a0 {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.top_a0 .brand_a0.selected_a0.item_a0 {
+    padding: 16px 16px;
+}
