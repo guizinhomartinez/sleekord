@@ -100,7 +100,15 @@
 .uploadDropModal_f82cc7,
 .uploadDropModal_f82cc7 .inner_f82cc7,
 .uploadDropModal_f82cc7.error_f82cc7 .icon_f82cc7.two_f82cc7,
-.connectedAccountContainer_ab12c6 {
+.connectedAccountContainer_ab12c6,
+.menuItemColor_ad5fac,
+.authBox_b83a05,
+.input_f8bc55.focused_f8bc55,
+.input_f8bc55:focus,
+.mediaBarProgress_d12f5a,
+.container_d746e5,
+.inset_ac5d22,
+.controls_f0cd33 div {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -123,7 +131,11 @@
 .horizontal_dc333f>.flexChild_dc333f:last-child,
 .hoverButtonGroup_d0395d,
 .expression-picker-chat-input-button,
-.wrapper_faf5ab {
+.wrapper_faf5ab,
+.container_b64375,
+.addFriendInputWrapper_de812f,
+.container_aef5fd,
+.icon_aef5fd {
     border-radius: 2em;
 }
 
@@ -187,8 +199,20 @@ button[aria-label="Open Soundboard"],
 .channel_c91bad:nth-child(4),
 .option_b0286e:after,
 .button_dd4f85[aria-label="Send a gift"],
-.item_a0[aria-label="Merch"] {
+.button_dd4f85[aria-label="Enviar um presente"],
+.item_a0[aria-label="Merch"],
+.giftIconButton_efde15,
+.barButtonAlt_cf58b5>svg {
     display: none;
+}
+
+.interactive_f5eb4b,
+.link_d8bfb3,
+.headerText_c47fa9,
+.tabBar_c2739c .item_c2739c,
+.tabBar_ecc04c .tabBarItem_ecc04c,
+.barButtonAlt_cf58b5 {
+    transition-duration: .25s;
 }
 
 /* text message field */
@@ -277,17 +301,11 @@ button[aria-label="Open Soundboard"],
 }
 
 .container_fc4f04[role="navigation"] {
-    position: sticky;
+    position: relative !important;
+    --__header-bar-background: rgba(15, 15, 18, .5);
+    backdrop-filter: blur(var(--blur-ammount));
     height: auto;
-    width: 80.5%;
-    left: 18vw !important;
-}
-
-@media (width < 1366px) {
-    .container_fc4f04[role="navigation"] {
-        width: 76.5vw;
-        transform: translateX(0rem);
-    }
+    border-radius: 0 !important;
 }
 
 .theme-dark .children_fc4f04:after {
@@ -310,11 +328,10 @@ button[aria-label="Open Soundboard"],
 }
 
 .peopleColumn_c2739c {
-    margin-top: 3em;
+    /* margin-top: 3em; */
 }
 
 .header_bf550a {
-    margin-top: 2.7em;
     padding: .5em;
     margin-right: 20%;
     margin-left: 20%;
@@ -333,6 +350,14 @@ button[aria-label="Open Soundboard"],
     background-color: var(--background-tertiary) !important;
 }
 
+.medium_c18ec9.iconLayout_c18ec9 {
+    margin-right: 5px;
+}
+
+.input_c18ec9 {
+    margin-left: 5px;
+}
+
 /* search bar */
 .searchBar_f0963d .searchBarComponent_f0963d {
     padding-left: .75rem;
@@ -340,21 +365,20 @@ button[aria-label="Open Soundboard"],
 }
 
 /* mute, deaf and settings button */
-.noWrap_ec1a20:not(
-        .footerSeparator_f9a4c9,
-        .justifyCenter_ec1a20,
-        .marginBottom20_f7730b,
-        .volume,
-        .noWrap_ec1a20[style="flex: 1 1 auto;"],
-        .noWrap_ec1a20[style="flex: 0 0 auto;"],
-        .justifyEnd_ec1a20
-    ) {
+.noWrap_ec1a20:not(.footerSeparator_f9a4c9,
+    .justifyCenter_ec1a20,
+    .marginBottom20_f7730b,
+    .volume,
+    .noWrap_ec1a20[style="flex: 1 1 auto;"],
+    .noWrap_ec1a20[style="flex: 0 0 auto;"],
+    .justifyEnd_ec1a20) {
     background-color: rgba(255, 255, 255, .05) !important;
     transform: translateX(-5px) !important;
     border-radius: .75rem !important;
 }
 
-button.button_adca65[aria-label="Mute"] {
+button.button_adca65[aria-label="Mute"],
+button.button_adca65[aria-label="Silenciar"] {
     border-radius: .75rem 0 0 .75rem !important;
 }
 
@@ -409,6 +433,12 @@ button.button_adca65[aria-label="User Settings"] {
     margin-top: .5em;
     background-color: var(--background-secondary) !important;
     margin-right: .5em;
+}
+
+.wrapper_d880dc~.membersWrap_cbd271 {
+    margin-top: 5.5em;
+    height: 90%;
+    z-index: 2000;
 }
 
 .container_c2739c {
@@ -522,7 +552,6 @@ button.button_adca65[aria-label="User Settings"] {
 
 /* keyframes */
 @keyframes appear {
-
     0%,
     10% {
         transform: translateY(50px);
@@ -579,16 +608,13 @@ button.button_adca65[aria-label="User Settings"] {
     margin-right: 2px;
     margin-left: 2px;
     transition-property: background-color;
-    transition-duration: .25s;
-}
-
-.barButtonAlt_cf58b5>svg {
-    display: none;
 }
 
 .barButtonAlt_cf58b5:hover {
     background-color: #727df8;
 }
+
+/* stopped transfering all the settings to separate folders here */
 
 /* streamer mode warning */
 .colorStreamerMode_be03aa,
@@ -622,16 +648,13 @@ button.button_adca65[aria-label="User Settings"] {
     padding: 4px;
     height: 32px;
     min-height: 32px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
     font-size: 14px;
     border-radius: 3em;
     display: flex;
-    box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    transition: .25s;
-    margin-bottom: 10px;
 }
 
 .tabBar_ecc04c .tabBarItem_ecc04c:hover {
@@ -642,12 +665,8 @@ button.button_adca65[aria-label="User Settings"] {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.top_a0 .selected_a0.themed_a0.item_a0>.text-sm\/normal_dc00ef {
-    font-weight: 800;
-}
-
 .connectedAccountContainer_ab12c6 {
-    background-color: var(--profile-body-divider-color,var(--background-modifier-accent));
+    background-color: var(--profile-body-divider-color, var(--background-modifier-accent));
 }
 
 /* vencord notification */
@@ -688,19 +707,39 @@ button.button_adca65[aria-label="User Settings"] {
 }
 
 .highlight {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0 5px 2.5px 5px;
 }
 
 .channelNameContainer_a9e225 {
     justify-content: center;
     background-color: rgba(255, 255, 255, .1);
-    margin-right: 2em;
-    margin-left: 2em;
+    width: fit-content;
+    margin: auto;
+    padding: 5px 10px;
+    margin-bottom: 10px;
 }
 
 .searchResultsWrap_c2b47d {
-    max-height: 93%;
+    max-height: 93%; 
+}
+
+.searchHeader_b7c924 {
+    height: fit-content;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.searchHeaderTabList_b7c924 {
+    background-color: rgba(255, 255, 255, .05);
+    border-radius: 2em;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10px;
+    gap: 8px;
+}
+
+.side_a0 .item_a0 {
+    padding: 5px 13px;
 }
 
 /* questions that appear when you just joined a server */
@@ -744,48 +783,13 @@ button.button_adca65[aria-label="User Settings"] {
     border-radius: 1em 0 1em 1em !important;
 }
 
-/* bubbles outside messages (like instagram) */
-/* my hamster that tests all the new features didn't approve it */
-
-/*
-.cozy_f9f2ca .messageContent_f9f2ca,
-.container_b558d0 {
-    background-color: var(--background-secondary-alt);
-    padding: 10px;
-    width: fit-content;
-    margin-bottom: -2px;
-}
-
-.cozy_f9f2ca .messageContent_f9f2ca {
-    transform: translateX(65px);
-    margin-right: 15px;
-}
-
-.container_b558d0 {
-    transform: translateX(-5px);
-    margin-top: 4px;
-}
-
-.cozy_f9f2ca .timestamp_f9f2ca.alt_f9f2ca {
-    transform: translateY(6px);
-    transition: .15s;
-}
-
-.theme-dark .message_d5deea.selected_d5deea,
-.theme-dark.mouse-mode.full-motion .message_d5deea:hover {
-    transition: .25s;
-}
-*/
-
-/* black backdrop */
-.backdrop_e4f2ae.withLayer_e4f2ae {
+/* black backdrop blur */
+.backdrop_e4f2ae {
     filter: blur(4px);
-    transition-property: filter;
-    transition-duration: .5s;
+    transition: backdrop-filter .25s;
 }
 
 /* CTRL+K search */
-.quickswitcher_f4e139,
 .quickswitcher_f4e139,
 .input_f4e139,
 .result_e3c1c6[aria-selected=true] {
@@ -793,6 +797,16 @@ button.button_adca65[aria-label="User Settings"] {
 }
 
 /* fonts customization */
+*,
+.title_cd377c,
+.markup_f8f345 h1,
+.markup_f8f345 h2,
+.markup_f8f345 h3,
+.heading-sm\/semibold_dc00ef,
+.text_b5cd55,
+.nickname_c32acf,
+.badgeContainer_d60c6d div,
+.title_aef5fd,
 .h1_c46f6a,
 .title_c1668f,
 .postTitleText_d331f1,
@@ -804,19 +818,20 @@ button.button_adca65[aria-label="User Settings"] {
 .title_a1cafe,
 .headerText_ae1fa2 {
     font-family: var(--font-primary);
-    font-weight: 800;
 }
 
-*,
-.title_cd377c,
-.markup_f8f345 h1,
-.markup_f8f345 h2,
-.markup_f8f345 h3,
-.heading-sm\/semibold_dc00ef,
-.text_b5cd55,
-.nickname_c32acf,
-.badgeContainer_d60c6d div {
-    font-family: var(--font-primary);
+.h1_c46f6a,
+.title_c1668f,
+.postTitleText_d331f1,
+.membersGroup_cbd271,
+.header_e378b3,
+.headerText_c47fa9,
+.overflow_a82120,
+.header_bf550a,
+.title_a1cafe,
+.headerText_ae1fa2,
+.top_a0 .selected_a0.themed_a0.item_a0>.text-sm\/normal_dc00ef {
+    font-weight: 800;
 }
 
 /* profile customization section in settings */
@@ -900,13 +915,37 @@ button[aria-label="Noise Suppression powered by Krisp"] {
     animation: appear .5s;
 } giving me too much headache at the moment will work on it later */
 
-.interactive_f5eb4b,
-.link_d8bfb3 {
-    transition-duration: .25s;
-}
-
 /* discover servers */
 .container_d746e5 {
-    border-radius: 1em !important;
     margin: .5em .5em .5em 0;
+}
+
+/* inbox menu */
+.tabBar_f0cd33 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    gap: 10px;
+    background-color: var(--background-primary);
+    width: max-content;
+    border-radius: 3em;
+    height: 36px;
+}
+
+.top_a0 .item_a0 {
+    border: transparent !important;
+    margin: 0;
+    padding: 0 16px;
+    border-radius: 3em;
+}
+
+.top_a0 .item_a0:hover,
+.top_a0 .brand_a0.selected_a0.item_a0 {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.top_a0 .brand_a0.selected_a0.item_a0 {
+    padding: 16px 16px;
 }
