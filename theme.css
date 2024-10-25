@@ -118,7 +118,7 @@
     border-radius: 4px 1em 1em 4px;
 }
 
-.themedBackground_d0696b,
+.themedBackground_bdf0de,
 .container_b6cd66,
 .submenuPaddingContainer_d90b3d,
 .memberInner_a31c43,
@@ -182,7 +182,7 @@ button[aria-label="Open Soundboard"],
 }
 
 .section_cd82a7,
-.themedBackground_d0696b,
+.themedBackground_bdf0de,
 .replyBar_b11c5e,
 .autocompleteAttached_bea0d0,
 .container_a3d172,
@@ -216,7 +216,7 @@ button[aria-label="Open Soundboard"],
 }
 
 /* text message field */
-.themedBackground_d0696b:not(.bioTextArea_ccf27d, .channelTextArea_d0696b) {
+.themedBackground_bdf0de:not(.bioTextArea_ccf27d, .channelTextArea_d0696b) {
     position: absolute;
     width: 100%;
     transform: translateY(-90%);
