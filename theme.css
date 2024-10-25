@@ -71,8 +71,6 @@
 .searchBar_e7c031,
 .members_cbd271,
 .card_a6d69a,
-.theme-dark .message_d5deea.selected_d5deea,
-.theme-dark.mouse-mode.full-motion .message_d5deea:hover,
 .quickswitcher_f4e139,
 .quickswitcher_f4e139,
 .input_f4e139,
@@ -108,7 +106,13 @@
 .mediaBarProgress_d12f5a,
 .container_d746e5,
 .inset_ac5d22,
-.controls_f0cd33 div {
+.controls_f0cd33 div,
+.popoutContainer_cf58b5,
+.credentialList_eaef52,
+.swatch_c66781,
+.colorDefault_d90b3d,
+.menu_d90b3d,
+.lookFilled_dd4f85.colorPrimary_dd4f85 {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
@@ -153,11 +157,9 @@
     border-radius: 10px !important;
 }
 
-.menu_d90b3d,
 .upload_df1eaf,
 .searchBar_e0840f,
-.lookFilled_dd4f85.colorPrimary_dd4f85,
-.colorDefault_d90b3d {
+.imageContainer_fa854f {
     border-radius: .5em;
 }
 
@@ -177,7 +179,9 @@ button[aria-label="Turn On Camera"],
 }
 
 button[aria-label="Open Soundboard"],
-.button_f7e168:last-child {
+.button_f7e168:last-child,
+.message_d5deea.selected_d5deea,
+.mouse-mode.full-motion .message_d5deea:hover {
     border-radius: 0 1rem 1rem 0;
 }
 
@@ -192,7 +196,7 @@ button[aria-label="Open Soundboard"],
     outline: rgba(255, 255, 255, .15) solid 2px;
 }
 
-/* disable new button, and the "nitro" & "shop" buttons */
+/* disable ads or useless buttons */
 .button_df39bd,
 .channelAppLauncher_df39bd,
 .channel_c91bad[aria-posinset="2"],
@@ -202,7 +206,8 @@ button[aria-label="Open Soundboard"],
 .button_dd4f85[aria-label="Enviar um presente"],
 .item_a0[aria-label="Merch"],
 .giftIconButton_efde15,
-.barButtonAlt_cf58b5>svg {
+.barButtonAlt_cf58b5>svg,
+.floatingNitroUpsell_bc425c {
     display: none;
 }
 
@@ -216,13 +221,18 @@ button[aria-label="Open Soundboard"],
 }
 
 /* text message field */
-.themedBackground_bdf0de:not(.bioTextArea_ccf27d, .channelTextArea_d0696b) {
+.themedBackground_bdf0de:not(.bioTextArea_ccf27d, .channelTextArea_d0696b, .contents_f9f2ca .themedBackground_bdf0de) {
     position: absolute;
     width: 100%;
     transform: translateY(-90%);
     background: rgb(35, 36, 43, .5);
     backdrop-filter: blur(var(--blur-ammount));
     transform: translateY(-100%);
+}
+
+.contents_f9f2ca .themedBackground_bdf0de {
+    background-color: #1E1F22;
+    outline: none;
 }
 
 .innerDisabled_d0696b,
@@ -377,16 +387,15 @@ button[aria-label="Open Soundboard"],
     border-radius: .75rem !important;
 }
 
-button.button_adca65[aria-label="Mute"],
-button.button_adca65[aria-label="Silenciar"] {
+button.button_adca65:first-child {
     border-radius: .75rem 0 0 .75rem !important;
 }
 
-button.button_dd4f85[aria-label="Deafen"] {
+button.button_dd4f85:nth-child(2):not(.lookFilled_dd4f85, .lookOutlined_dd4f85) {
     border-radius: 0 !important;
 }
 
-button.button_adca65[aria-label="User Settings"] {
+button.button_adca65:last-child {
     border-radius: 0 .75rem .75rem 0 !important;
 }
 
@@ -515,7 +524,7 @@ button.button_adca65[aria-label="User Settings"] {
     padding: 10px 15px 10px 10px;
     max-width: calc(100% - 5px);
     margin: 0 40% 0 40%;
-    bottom: 1.5em;
+    bottom: 3.5em;
     background-color: rgba(0, 0, 100, .2);
     backdrop-filter: blur(var(--blur-ammount));
     animation: appear .25s;
@@ -815,7 +824,8 @@ button.button_adca65[aria-label="User Settings"] {
 .overflow_a82120,
 .header_bf550a,
 .title_a1cafe,
-.headerText_ae1fa2 {
+.headerText_ae1fa2,
+.eyebrow_c46f6a {
     font-family: var(--font-primary);
 }
 
@@ -843,30 +853,34 @@ button.button_adca65[aria-label="User Settings"] {
 
 /* hover image buttons */
 .hoverButtonGroup_d0395d {
-    padding: 2px;
+    padding: 1px;
     display: flex;
     align-items: center;
-    margin: 3px;
 }
 
-.hoverButtonGroup_d0395d>div {
-    transition: .1s ease-out !important;
-    border-radius: 100%;
+.hoverButtonGroup_d0395d div {
+    height: 20px;
+    width: 20px;
 }
 
-.hoverButtonGroup_d0395d>div:hover:first-child {
-    scale: 120% !important;
+.hoverButtonGroup_d0395d div {
+    transition-timing-function: cubic-bezier(.16,1,.3,1);
+    transition: transform .4s !important;
+    display: block;
+    object-fit: contain;
+}
+
+.hoverButton_d0395d {
     border-radius: 2em 0 0 2em;
 }
 
-.hoverButtonGroup_d0395d>div:hover:last-child {
-    scale: 115% !important;
+.hoverButton_d0395d:last-child {
     border-radius: 0 2em 2em 0;
 }
 
 /* leave call and krisp audio buttons */
-.horizontal_dc333f>.flex_dc333f:last-child,
-.horizontal_dc333f>.flexChild_dc333f:last-child {
+.horizontal_dc333f>.flex_dc333f:last-child:not(.truncatingText_e58351),
+.horizontal_dc333f>.flexChild_dc333f:last-child:not(.truncatingText_e58351) {
     margin-right: 5px;
     background-color: var(--background-primary);
     padding: 2.5px;
