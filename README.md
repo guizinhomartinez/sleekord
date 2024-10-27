@@ -14,7 +14,7 @@ First, go to your Discord themes folder (either Vencord, or BetterDiscord). Ther
     --font-primary: "SF Pro Display", Satoshi, "gg sans", sans-serif; /* Default is "SF Pro Display", change this to whatever font you want */
 }
 
-https://raw.githubusercontent.com/guizinhomartinez/custom-discord-theme/refs/heads/main/theme.css
+@import url(https://raw.githubusercontent.com/guizinhomartinez/custom-discord-theme/refs/heads/main/theme.css);
 ```
 
 This method insures that the theme is always following the latest Git commit, and thus you will not have to update the theme, as it will be updated automatically. Alternatively, you can copy and paste the source of the theme into the file aswell, but this requires manual updating.
