@@ -36,7 +36,6 @@
 .chatContent_a7d72e,
 .popover_e986d9,
 .replyBar_b11c5e,
-.lookOutlined_dd4f85,
 .inputDefault_f8bc55,
 .container_c18ec9,
 .accountProfileCard_b69b77,
@@ -118,21 +117,38 @@
 .answerInner_cf2c85,
 .container_a1531c,
 .videoControls_f72aac,
-.inner_c69a7b.biteSize_c69a7b,
 .menuOverlay_ad5fac,
 .popout_c5b389,
 .popout_c5b389>div:not(.more_c5b389),
 .membershipDialogHouse1_dc8e43,
 .card_a298b8:not(.outline_a298b8),
 .button_bb7809,
-.select_bb7809 {
+.select_bb7809,
+.mention,
+.sidebarContainer_d2194f>div,
+.container_d936aa,
+.container_f51af4,
+.modInfoItemContainer_ce9fb9,
+.roleContainer_f51af4 div,
+.container_be45f6,
+.radioBar_eb92a8,
+.itemFilled_eb92a8,
+.role_f9575e,
+.content_d80634,
+.card_ae1fa2,
+.outer_c69a7b,
+.lookFilled_f6639d.select_f6639d,
+.container_a6d69a,
+.px_a9e77f.botTag_a9e77f,
+.header_fd6364,
+.scroller_bc9592,
+.memberListItem_bc9592:not(.popoutDisabled_bc9592):hover {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em;
 }
 
-.radioBar_eb92a8.radioPositionLeft_eb92a8,
-.itemFilled_eb92a8 {
-    border-radius: 4px 1em 1em 4px;
+.radioBar_eb92a8.radioPositionLeft_eb92a8 {
+    border-radius: 4px 1em 4px 1em;
 }
 
 .themedBackground_bdf0de,
@@ -159,7 +175,10 @@
 .wrapper_f6639d .select_f6639d,
 .lookFilled_dd4f85.colorPrimary_dd4f85,
 .lookFilled_f6639d,
-.grabber_c7a159 {
+.grabber_c7a159,
+.lookOutlined_dd4f85,
+.wrapper_d1fdce,
+.card_d1fdce {
     border-radius: 2em;
 }
 
@@ -178,7 +197,6 @@
 .upload_df1eaf,
 .searchBar_e0840f,
 .imageContainer_fa854f,
-.mention,
 .rem_a9e77f.botTag_a9e77f {
     border-radius: .5em;
 }
@@ -340,7 +358,7 @@ button[aria-label="Open Soundboard"],
 }
 
 .lookFilled_dd4f85.colorBrand_dd4f85 {
-    margin: 0;
+    /* margin: 0; */
 }
 
 .chatHeaderBar_efb691:after {
@@ -431,7 +449,10 @@ button[aria-label="Open Soundboard"],
     .volume,
     .noWrap_ec1a20[style="flex: 1 1 auto;"],
     .noWrap_ec1a20[style="flex: 0 0 auto;"],
-    .justifyEnd_ec1a20) {
+    .justifyEnd_ec1a20,
+    .flex_dc333f.vertical_ec1a20.justifyStart_ec1a20.alignStart_ec1a20.noWrap_ec1a20,
+    .flex_dc333f.horizontal_dc333f.justifyBetween_ec1a20.alignStretch_ec1a20.noWrap_ec1a20,
+    .flex_dc333f.horizontal_dc333f.justifyStart_ec1a20.alignCenter_ec1a20.noWrap_ec1a20[style="flex: 0 1 auto;"]) {
     background-color: rgba(255, 255, 255, .05) !important;
     transform: translateX(-5px) !important;
     border-radius: .75rem !important;
@@ -469,8 +490,8 @@ button.button_adca65:last-child {
     padding-left: 2px;
 }
 
-.horizontal_dc333f>.flex_dc333f,
-.horizontal_dc333f>.flexChild_dc333f {
+.horizontal_dc333f>.flex_dc333f:not(div[style="flex: 1 1 auto; max-width: 180px;"]),
+.horizontal_dc333f>.flexChild_dc333f:not(div[style="flex: 1 1 auto; max-width: 180px;"]) {
     transform: translateY(2px) !important;
 }
 
@@ -498,6 +519,11 @@ button.button_adca65:last-child {
     margin-top: .5em;
 }
 
+.container_cbd271,
+.membersWrap_cbd271 {
+    margin-left: .5em;
+}
+
 .scroller_c43953 {
     margin-bottom: 60px;
 }
@@ -514,7 +540,6 @@ button.button_adca65:last-child {
     background-color: var(--__header-bar-background);
     backdrop-filter: blur(var(--blur-ammount));
     /* box-shadow: none; */
-    border-radius: 1em;
 }
 
 .header_fd6364 .menu_d90b3d {
@@ -542,7 +567,7 @@ button.button_adca65:last-child {
 }
 
 .container_b558d0>* {
-    border-radius: 4px 1em 1em 4px;
+    border-radius: 6px 1em 1em 6px;
 }
 
 .container_fa295b {
@@ -564,6 +589,11 @@ button.button_adca65:last-child {
     align-items: center;
     justify-content: center;
     background-color: transparent !important;
+}
+
+.contextMenuNub_ef18ee {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 /* typing pop-up */
@@ -773,8 +803,12 @@ button.button_adca65:last-child {
     margin-left: .5em;
 }
 
+.header_fa4e6d,
 .banner_a823cd {
     border-radius: 1em 1em 0 0;
+}
+
+.banner_a823cd {
     box-shadow: var(--shadow-button-overlay);
 }
 
@@ -797,6 +831,10 @@ button.button_adca65:last-child {
 
 .highlight {
     padding: 0 5px 2.5px 5px;
+}
+
+.mention {
+    padding: 0 5px;
 }
 
 .channelNameContainer_a9e225 {
@@ -932,7 +970,8 @@ h2,
 }
 
 /* settings */
-.closeButton_df5532, .keybind_df5532 {
+.closeButton_df5532,
+.keybind_df5532 {
     transition-duration: .25s;
 }
 
@@ -999,8 +1038,8 @@ h2,
 }
 
 /* leave call and krisp audio buttons */
-.horizontal_dc333f>.flex_dc333f:last-child:not(.truncatingText_e58351),
-.horizontal_dc333f>.flexChild_dc333f:last-child:not(.truncatingText_e58351) {
+.horizontal_dc333f>.flex_dc333f:last-child:not(.truncatingText_e58351, div[style="flex: 1 1 auto; max-width: 180px;"]),
+.horizontal_dc333f>.flexChild_dc333f:last-child:not(.truncatingText_e58351, div[style="flex: 1 1 auto; max-width: 180px;"]) {
     margin-right: 8px !important;
     background-color: var(--background-primary);
 }
@@ -1020,6 +1059,7 @@ button[aria-label="Noise Suppression powered by Krisp"] {
 
 .wrapper_d880dc .container_fc4f04 {
     background-color: transparent !important;
+    box-shadow: none;
     backdrop-filter: blur(0);
 }
 
@@ -1037,14 +1077,15 @@ button[aria-label="Noise Suppression powered by Krisp"] {
     padding: 2px 4px;
 }
 
-/* new message animation */
-/* .cozyMessage_d5deea.groupStart_d5deea:last-child,
+/*
+new message animation
+.cozyMessage_d5deea.groupStart_d5deea:last-child,
 .messageContent_f9f2ca:not(.isSending_f9f2ca, .alt_f9f2ca, .messageContent_d331f1),
 .markup_f8f345:not(.isSending_f9f2ca, .alt_f9f2ca, .fontSize16Padding_d0696b, .messageContent_d331f1, .defaultColor_a595eb .text-sm\/normal_dc00ef) {
     animation: appear .5s;
-} giving me too much headache at the moment will work on it later */
+} giving me too much headache at the moment will work on it later
 
-/* discover servers */
+discover servers */
 .container_d746e5 {
     margin: .5em .5em .5em 0;
 }
@@ -1089,4 +1130,8 @@ button[aria-label="Noise Suppression powered by Krisp"] {
     border: none;
     margin: 2.5px 0;
     box-shadow: var(--shadow-button-overlay);
+}
+
+.membersWrap_cbd271 {
+    margin-top: 2em; /* someday this will work i swear */
 }
