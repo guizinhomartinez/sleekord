@@ -1009,7 +1009,7 @@ h2,
 .markup_f8f345 code,
 code {
     font-family: var(--font-code) !important;
-    font-size: 8px;
+    /* font-size: 8px; never change a text's size without properly testing it */
 }
 
 .h1_c46f6a,
