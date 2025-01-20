@@ -10,6 +10,22 @@
     --blur-ammount: 50px;
     --font-primary: "SF Pro Display", Satoshi, "gg sans", sans-serif;
     --font-code: "JetBrains Mono", "gg mono";
+    --selection-color: color-mix(in srgb, #3584e4 30%, transparent);
+}
+
+.theme-dark {
+    --header-bg: rgba(15, 15, 18, .5) !important;
+    --text-message-field: #2a2b32;
+    --text-message-field-2: rgb(35, 36, 43, .5);
+    --text-message-field-outline: rgba(255, 255, 255, .1) solid 2px;
+}
+
+.theme-light {
+    --header-bg: rgba(242, 243, 245, .5) !important;
+    --text-message-field: var(--background-secondary);
+    --text-message-field-2: var(--background-secondary-alt);
+    --text-message-field-outline: rgba(220, 220, 220, 1) solid 2px;
+    --box-shadow-value: 0 0px 5px 2px rgba(0, 0, 0, 25%);
 }
 
 /* centralize everything that is repeated to one single thing */
@@ -175,8 +191,8 @@
 .container_e80fe9,
 .endButton_b48941,
 .list_f20a46,
-.imageWrapper_d4597d
-/* .contentCircle_f2f431 */ {
+.imageWrapper_d4597d,
+.markup_f8f345 code {
     border-radius: 1rem !important;
     --custom-base-tile-border-radius: 1em !important;
 }
@@ -268,8 +284,9 @@ button[aria-label="Open Soundboard"],
 .upload_df1eaf,
 .typing_d7ebeb:not(.full-motion .container_d331f1 .typing_d7ebeb, .chat_f57fdc .typing_d7ebeb),
 .container_c15230,
-.jumpToPresentBar_cf58b5 {
-    outline: rgba(255, 255, 255, .15) solid 2px;
+.jumpToPresentBar_cf58b5,
+.wrapper_f7e168 {
+    outline: var(--text-message-field-outline);
 }
 
 /* disable ads or useless buttons */
@@ -293,7 +310,8 @@ button[aria-label="Open Soundboard"],
 .nitroUpsell_f2f431,
 .nitroUpsell_ba5b9e,
 .nitroTopDividerLower_e8f337,
-.container_e5a9ed {
+.container_e5a9ed,
+.children_fc4f04:after {
     display: none !important;
 }
 
@@ -308,12 +326,9 @@ button[aria-label="Open Soundboard"],
 .chatContent_a7d72e,
 .content_d80634,
 .content_d80634 div,
-.endButton_b48941 {
+.endButton_b48941,
+.roundButton_b48941 {
     transition-duration: .25s;
-}
-
-.contents_dd4f85 {
-    /* border-radius: 0 !important; */
 }
 
 /* text message field */
@@ -326,9 +341,10 @@ button[aria-label="Open Soundboard"],
     position: absolute;
     width: 100%;
     transform: translateY(-90%);
-    background: rgb(35, 36, 43, .5);
+    background: var(--text-message-field-2);
     backdrop-filter: blur(var(--blur-ammount));
     transform: translateY(-100%);
+    box-shadow: var(--box-shadow-value);
 }
 
 .contents_f9f2ca .themedBackground_bdf0de,
@@ -337,7 +353,7 @@ button[aria-label="Open Soundboard"],
 }
 
 .contents_f9f2ca .themedBackground_bdf0de {
-    background-color: #1E1F22;
+    background-color: rgba(30, 31, 34, 1);
 }
 
 .channelTextAreaDisabled_bdf0de .scrollableContainer_bdf0de {
@@ -397,12 +413,13 @@ button[aria-label="Open Soundboard"],
 }
 
 /* current user/server you're in */
-.container_fc4f04 {
+.themed_fc4f04 {
     position: absolute !important;
-    --__header-bar-background: rgba(15, 15, 18, .5);
+    --__header-bar-background: var(--header-bg);
     backdrop-filter: blur(var(--blur-ammount));
     height: calc(100% + 1px);
-    box-shadow: var(--shadow-button-overlay);
+    /* box-shadow: 0 6px 15px rgba(0, 0, 0, 25%); */
+    outline: 1px solid var(--text-message-field-outline);
 }
 
 .chatHeaderBar_efb691 {
@@ -447,7 +464,7 @@ button[aria-label="Open Soundboard"],
 
 .container_fc4f04[role="navigation"] {
     position: relative !important;
-    --__header-bar-background: rgba(15, 15, 18, .5);
+    --__header-bar-background: var(--header-bg);
     backdrop-filter: blur(var(--blur-ammount));
     height: auto;
 }
@@ -539,8 +556,8 @@ button.button_adca65:last-child {
     bottom: 13px;
     left: 3.5px;
     width: 14.5rem !important;
-    box-shadow: 0 10px 3px rgba(0, 0, 0, 25%);
-    outline: rgba(255, 255, 255, .05) solid 2px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
+    outline: var(--text-message-field-outline) !important;
     background-color: transparent;
 }
 
@@ -600,9 +617,8 @@ button.button_adca65:last-child {
 }
 
 .header_fd6364 {
-    background-color: var(--__header-bar-background);
+    background-color: var(--text-message-field);
     backdrop-filter: blur(var(--blur-ammount));
-    /* box-shadow: none; */
 }
 
 .header_fd6364 .menu_d90b3d {
@@ -887,7 +903,7 @@ button.button_adca65:last-child {
 }
 
 #app-mount .container_eedf95 {
-    background-color: var(--__header-bar-background);
+    background-color: var(--header-bg);
     border: 2px solid rgba(255, 255, 255, .1);
     backdrop-filter: blur(var(--blur-ammount));
     transform: translateX(-2.5em);
@@ -996,7 +1012,7 @@ button.button_adca65:last-child {
 }
 
 /* fonts customization */
-*,
+*:not(.codeContainer_f8f345 *),
 h2,
 .title_cd377c,
 .markup_f8f345 h1,
@@ -1233,7 +1249,7 @@ discover servers */
 
 /* selection */
 ::selection {
-    background-color: #3367d1;
+    background-color: var(--selection-color);
 }
 
 /* x icon when you hover a bot message */
