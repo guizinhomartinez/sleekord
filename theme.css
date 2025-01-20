@@ -1012,7 +1012,7 @@ button.button_adca65:last-child {
 }
 
 /* fonts customization */
-*:not(.codeContainer_f8f345 *),
+*:not(.codeContainer_f8f345 *, .codeLine_cdb578 *),
 h2,
 .title_cd377c,
 .markup_f8f345 h1,
@@ -1041,7 +1041,8 @@ h2,
 }
 
 .markup_f8f345 code,
-code {
+code,
+.codeLine_cdb578 {
     font-family: var(--font-code) !important;
     /* font-size: 8px; never change a text's size without properly testing it */
 }
@@ -1161,13 +1162,16 @@ button[aria-label="Noise Suppression powered by Krisp"] {
 }
 
 .quickSelect_abbf45 {
-    margin-top: 50px;
-    margin-right: -6px;
+    margin-right: -.8em;
 }
 
 .quickSelectValue_abbf45,
 .quickSelectArrow_abbf45 {
-    padding: 2px 4px;
+    padding: 3px 4px;
+}
+
+.quickSelectArrow_abbf45 {
+    margin-right: 4px;
 }
 
 /*
