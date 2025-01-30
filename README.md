@@ -3,4 +3,4 @@ This Discord theme aims to make the Discord experience better, making the UI mor
 Currently on the project, there are only two settings you can change blur-ammount and font-primary, you can change these by following the installation guide.
 
 ## Installation
-Please refer to the **[website that I've made for everything relating to this project.](https://sleekord.vercel.app/)**
+Please refer to **[the website that I've made for everything relating to this project.](https://sleekord.vercel.app/)**
